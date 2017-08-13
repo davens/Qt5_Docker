@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:17.04
 MAINTAINER Ali Diouri <alidiouri@gmail.com>
 
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
