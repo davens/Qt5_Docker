@@ -3,7 +3,7 @@ MAINTAINER Ali Diouri <alidiouri@gmail.com>
 
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
-RUN echo 'deb http://ppa.launchpad.net/beineri/opt-qt58-xenial/ubuntu xenial main' >> /etc/apt/sources.list
+RUN echo 'deb http://ppa.launchpad.net/beineri/opt-qt-5.11.0-xenial/ubuntu xenial main' >> /etc/apt/sources.list
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E9977759 
 
 # install depdencies
@@ -27,10 +27,10 @@ RUN apt update &&                  \
         libx11-dev                 \
         libgl1-mesa-dev            \
         libudev-dev                \
-        qt58-meta-full &&          \
+        qt511-meta-full &&          \
     apt clean
 
-ENV QT_BASE_DIR=/opt/qt58
+ENV QT_BASE_DIR=/opt/qt511
 ENV QTDIR=$QT_BASE_DIR
 ENV PATH=$QT_BASE_DIR/bin:$PATH
 ENV LD_LIBRARY_PATH=$QT_BASE_DIR/lib:$LD_LIBRARY_PATH
